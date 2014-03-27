@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>OXAutomation</id>
+        <!-- Version is dynamically generated from the build script -->
+        <!-- Changes made directly to the version will be overwritten -->
+        <version>0.1.0.0</version>
+        <title>OX Automation Service</title>
+        <authors>Lucas Martinez</authors>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>TSConsole schedule restart service</description>
+        <releaseNotes>Initial release</releaseNotes>
+    </metadata>
+    <files>
+        <file src="OXAutomationConsole.exe" target=".\bin" />
+        <file src="OXAutomationConsole.exe.config" target=".\bin\" />
+        <file src="OXAutomationService.exe" target=".\bin\" />
+        <file src="OXAutomationService.exe.config" target=".\bin\" />
+        <file src="TSConsole.exe" target=".\bin\" />
+        <file src="tools\**" target="tools" />
+    </files>
+</package>
