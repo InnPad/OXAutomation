@@ -15,7 +15,6 @@ try { #error handling is only necessary if you need to do anything in addition t
     Write-Output "Installing service $packageName from $installPath.." | Out-Null
     
     $exePath = "$installPath\OXAutomationService.exe"
-    $cred = new-object -typename System.Management.Automation.PSCredential -argumentlist $username, $password
     
     # Log as system service
     New-Service -BinaryPathName $exePath -Name $serviceName -DisplayName $serviceName -StartupType Automatic
