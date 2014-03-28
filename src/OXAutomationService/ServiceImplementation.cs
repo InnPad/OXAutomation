@@ -18,7 +18,7 @@ namespace OXAutomation
         public void InitializeService()
         {
             log4net.Config.XmlConfigurator.Configure();
-            _logger = log4net.LogManager.GetLogger(this.GetType());
+            _logger = log4net.LogManager.GetLogger("OXAutomation");
             _logger.Info("Service initialized.");
             _autoEvent = new AutoResetEvent(false);
         }
@@ -65,9 +65,20 @@ namespace OXAutomation
             _ready = false;
 
             _logger.Info("Entering Tick...");
-            var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
 
-            var task = (Configuration.TaskSection)config.GetSection("oxAutomation/task");
+            Configuration.TaskSection task;
+
+            try
+            {
+                var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+
+                task = (Configuration.TaskSection)config.GetSection("oxAutomation/task");
+            }
+            catch (Exception e)
+            {
+                _logger.Error(e);
+                return;
+            }
 
             var startTime = (TimeOfDay)task.StartTime;
             var period = (TimeSpan)(TimeOfDay)task.Period;
@@ -91,9 +102,7 @@ namespace OXAutomation
 
                         processes.TerminateAll(0);
 
-
-                        processes = new[] { Process.Start(task.Restart, task.Arguments) };
-
+                        processes = new[] { Process.Start(task.Restart, task.Arguments) }.Where(o => o != null).ToArray();
 
                         processes.ExecuteAll(actions.Where(o => o.Step >= 0));
                     }

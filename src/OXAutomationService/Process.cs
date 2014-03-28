@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace OXAutomation
 {
-    public class Process
+    public partial class Process
     {
         public static IReadOnlyCollection<Process> Enum(string name)
         {
@@ -18,20 +18,13 @@ namespace OXAutomation
             return Array.AsReadOnly<Process>(System.Diagnostics.Process.GetProcessesByName(name).Select(o => new Process(o)).ToArray());
         }
 
-        public static Process Start(string path, string arguments)
-        {
-            var process = System.Diagnostics.Process.Start(path, arguments);
-
-            process.WaitForInputIdle(5000);
-
-            return new Process(process);
-        }
-
-        System.Diagnostics.Process _process;
-
+        private System.Diagnostics.Process _process;
+        private log4net.ILog _logger;
+        
         private Process(System.Diagnostics.Process process)
         {
             _process = process;
+            _logger = log4net.LogManager.GetLogger("OXAutomation");
         }
 
         public string Id
@@ -69,24 +62,31 @@ namespace OXAutomation
 
             if (!message.TryParseMsg(out msg))
             {
+                _logger.ErrorFormat("Could not parse message {0}", message);
                 return long.MinValue;
             }
 
             if (!wParam.TryParseInt(out wparam))
             {
+                _logger.ErrorFormat("Could not parse wparam {0}", wParam);
                 return long.MinValue + 1;
             }
 
             if (!lParam.TryParseInt(out lparam))
             {
+                _logger.ErrorFormat("Could not parse lparam {0}", lParam);
                 return long.MinValue + 2;
             }
+
+            _logger.InfoFormat("Sending {0} 0x{1:X08} 0x{2:X08} to {3} ({4})", message, wparam, lparam, _process.ProcessName, _process.Id);
 
             return Send(msg, wparam, lparam);
         }
 
         public void Terminate(int timeout = 0)
         {
+            _logger.InfoFormat("Terminating process {0} (id: {1})", _process.ProcessName, _process.Id);
+
             _process.Kill();
 
             if (timeout > 0)

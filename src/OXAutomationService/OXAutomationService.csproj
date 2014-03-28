@@ -46,11 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationLoader.cs" />
     <Compile Include="Configuration\SendElement.cs" />
     <Compile Include="Configuration\SendElementCollection.cs" />
     <Compile Include="Configuration\TaskSection.cs" />
     <Compile Include="Messages.cs" />
     <Compile Include="Process.cs" />
+    <Compile Include="Process.Start.cs" />
     <Compile Include="ProcessExtensions.cs" />
     <Compile Include="ServiceImplementation.cs">
       <SubType>Component</SubType>
@@ -69,7 +71,9 @@
     <Compile Include="User32.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

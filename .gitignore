@@ -78,3 +78,6 @@ src/TSConsole/Release/TSConsole.obj
 src/TSConsole/Release/TSConsole.pch
 src/TSConsole/Release/TSConsole.res
 src/TSConsole/Release/vc110.pdb
+src/OXAutomationService/bin/Debug/log4net.dll
+src/OXAutomationService/bin/Debug/log4net.xml
+src/OXAutomation.opensdf
