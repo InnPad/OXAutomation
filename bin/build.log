@@ -1,4 +1,4 @@
-Build started 3/28/2014 2:58:40 PM.
+Build started 3/28/2014 3:02:44 PM.
 Project "C:\oxautomation\src\OXAutomation.sln" on node 1 (Build target(s)).
 Building with tools version "2.0".
 Target "ValidateSolutionConfiguration" in file "C:\oxautomation\src\OXAutomation.sln.metaproj" from project "C:\oxautomation\src\OXAutomation.sln" (entry point):
@@ -459,18 +459,9 @@ Done executing task "CallTarget".
 Done building target "PreXsdCodeGen" in project "OXAutomationService.csproj".
 Target "XsdCodeGen" skipped, due to false condition; ( '$(XsdCodeGenPreCondition)' == 'True' ) was evaluated as ( 'False' == 'True' ).
 Target "CoreCompile" in file "C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Microsoft.CSharp.targets" from project "C:\oxautomation\src\OXAutomationService\OXAutomationService.csproj" (target "Compile" depends on it):
-Building target "CoreCompile" completely.
-Input file "Process.Start.cs" is newer than output file "obj\Release\OXAutomationService.pdb".
-Using "Csc" task from assembly "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
-Task "Csc"
-  C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Csc.exe /noconfig /nowarn:1701,1702 /nostdlib+ /platform:anycpu32bitpreferred /errorreport:prompt /warn:4 /define:TRACE /highentropyva+ /reference:C:\oxautomation\src\packages\log4net.2.0.3\lib\net40-full\log4net.dll /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Microsoft.CSharp.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\mscorlib.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Configuration.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Core.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.DataSetExtensions.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.ServiceProcess.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.Linq.dll" /debug:pdbonly /filealign:512 /optimize+ /out:obj\Release\OXAutomationService.exe /subsystemversion:6.00 /target:winexe /utf8output ApplicationLoader.cs Configuration\SendElement.cs Configuration\SendElementCollection.cs Configuration\TaskSection.cs Messages.cs Process.cs Process.Start.cs ProcessExtensions.cs ServiceImplementation.cs StringExtensions.cs TSConsole.cs TimeOfDay.cs Service.cs Service.Designer.cs Program.cs Properties\AssemblyInfo.cs User32.cs "C:\Users\LMARTINEZ\AppData\Local\Temp\.NETFramework,Version=v4.5.AssemblyAttributes.cs"
-  Microsoft (R) Visual C# Compiler version 4.0.30319.18408
-  
-  for Microsoft (R) .NET Framework 4.5
-  Copyright (C) Microsoft Corporation. All rights reserved.
-  
-Done executing task "Csc".
-Task "CallTarget" skipped, due to false condition; ('$(TargetsTriggeredByCompilation)' != '') was evaluated as ('' != '').
+Skipping target "CoreCompile" because all output files are up-to-date with respect to the input files.
+Input files: ApplicationLoader.cs;Configuration\SendElement.cs;Configuration\SendElementCollection.cs;Configuration\TaskSection.cs;Messages.cs;Process.cs;Process.Start.cs;ProcessExtensions.cs;ServiceImplementation.cs;StringExtensions.cs;TSConsole.cs;TimeOfDay.cs;Service.cs;Service.Designer.cs;Program.cs;Properties\AssemblyInfo.cs;User32.cs;C:\Users\LMARTINEZ\AppData\Local\Temp\.NETFramework,Version=v4.5.AssemblyAttributes.cs;C:\oxautomation\src\packages\log4net.2.0.3\lib\net40-full\log4net.dll;C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Microsoft.CSharp.dll;C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\mscorlib.dll;C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Configuration.dll;C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Core.dll;C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.DataSetExtensions.dll;C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.dll;C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll;C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.ServiceProcess.dll;C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.dll;C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.Linq.dll;C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Microsoft.CSharp.targets;C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Microsoft.NETFramework.props;C:\oxautomation\src\OXAutomationService\OXAutomationService.csproj;C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Microsoft.Common.targets;C:\oxautomation\src\OXAutomationService\OXAutomationService.csproj.user;C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Microsoft.NETFramework.targets;C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Microsoft.Xaml.targets
+Output files: obj\Release\OXAutomationService.exe;obj\Release\OXAutomationService.pdb
 Done building target "CoreCompile" in project "OXAutomationService.csproj".
 Target "_TimeStampAfterCompile" skipped, due to false condition; ('$(RunPostBuildEvent)'=='OnOutputUpdated' or ('$(RegisterForComInterop)'=='true' and '$(OutputType)'=='library')) was evaluated as (''=='OnOutputUpdated' or (''=='true' and 'WinExe'=='library')).
 Target "AfterCompile" in file "C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Microsoft.Common.targets" from project "C:\oxautomation\src\OXAutomationService\OXAutomationService.csproj" (target "Compile" depends on it):
@@ -536,7 +527,7 @@ Done building target "_CheckForCompileOutputs" in project "OXAutomationService.c
 Target "_SGenCheckForOutputs" skipped, due to false condition; ('$(_SGenGenerateSerializationAssembliesConfig)' == 'On' or ('@(WebReferenceUrl)'!='' and '$(_SGenGenerateSerializationAssembliesConfig)' == 'Auto')) was evaluated as ('Auto' == 'On' or (''!='' and 'Auto' == 'Auto')).
 Target "CopyFilesToOutputDirectory" in file "C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Microsoft.Common.targets" from project "C:\oxautomation\src\OXAutomationService\OXAutomationService.csproj" (target "PrepareForRun" depends on it):
 Task "Copy"
-  Copying file from "obj\Release\OXAutomationService.exe" to "C:\oxautomation\bin\OXAutomationService.exe".
+  Did not copy from file "obj\Release\OXAutomationService.exe" to file "C:\oxautomation\bin\OXAutomationService.exe" because the "SkipUnchangedFiles" parameter was set to "true" in the project and the files' sizes and timestamps match.
 Done executing task "Copy".
 Task "Message"
   OXAutomationService -> C:\oxautomation\bin\OXAutomationService.exe
@@ -544,7 +535,7 @@ Done executing task "Message".
 Task "Copy" skipped, due to false condition; ('@(AddModules)' != '') was evaluated as ('' != '').
 Task "Copy" skipped, due to false condition; ('$(_SGenDllCreated)'=='true') was evaluated as ('false'=='true').
 Task "Copy"
-  Copying file from "obj\Release\OXAutomationService.pdb" to "C:\oxautomation\bin\OXAutomationService.pdb".
+  Did not copy from file "obj\Release\OXAutomationService.pdb" to file "C:\oxautomation\bin\OXAutomationService.pdb" because the "SkipUnchangedFiles" parameter was set to "true" in the project and the files' sizes and timestamps match.
 Done executing task "Copy".
 Task "Copy" skipped, due to false condition; ('$(_DocumentationFileProduced)'=='true') was evaluated as ('false'=='true').
 Task "Copy" skipped, due to false condition; ('@(IntermediateSatelliteAssembliesWithTargetPath)' != '') was evaluated as ('' != '').
@@ -862,7 +853,13 @@ Task "CL"
   	C:\oxautomation\src\TSConsole\Release\cl.read.1.tlog
   Outputs for C:\OXAUTOMATION\SRC\TSCONSOLE\TSCONSOLE.CPP:
   	C:\OXAUTOMATION\SRC\TSCONSOLE\RELEASE\TSCONSOLE.OBJ
-  All outputs are up-to-date.
+  TSConsole.cpp will be compiled as C:\oxautomation\src\TSConsole\TSConsole.cpp was modified at 3/28/2014 3:02:36 PM.
+  Write Tracking Logs:
+  	Release\cl.write.1.tlog
+  C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Release\TSConsole.pch" /Fo"Release\\" /Fd"Release\vc110.pdb" /Gd /TP /analyze- /errorReport:queue TSConsole.cpp
+  Tracking command:
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v8.0A\bin\NETFX 4.0 Tools\Tracker.exe /d C:\Windows\Microsoft.NET\Framework\v4.0.30319\FileTracker.dll /i C:\oxautomation\src\TSConsole\Release /r C:\OXAUTOMATION\SRC\TSCONSOLE\TSCONSOLE.CPP /b MSBuildConsole_CancelEventf9657d37a4f0457d92f1bd0d30ae1f15  /c "C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe"  /c /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Release\TSConsole.pch" /Fo"Release\\" /Fd"Release\vc110.pdb" /Gd /TP /analyze- /errorReport:queue TSConsole.cpp
+  TSConsole.cpp
 Done executing task "CL".
 Done building target "ClCompile" in project "TSConsole.vcxproj".
 Target "ManagedIncrementalBuildPostProcessDependencyGraph" skipped, due to false condition; ('@(ClCompile)' != '' and '$(EnableManagedIncrementalBuild)' == 'True') was evaluated as ('stdafx.cpp;TSConsole.cpp' != '' and 'false' == 'True').
@@ -999,7 +996,42 @@ Task "Link"
   Outputs for C:\OXAUTOMATION\SRC\TSCONSOLE\RELEASE\STDAFX.OBJ|C:\OXAUTOMATION\SRC\TSCONSOLE\RELEASE\TSCONSOLE.OBJ|C:\OXAUTOMATION\SRC\TSCONSOLE\RELEASE\TSCONSOLE.RES:
   	C:\OXAUTOMATION\BIN\TSCONSOLE.EXE
   	C:\OXAUTOMATION\BIN\TSCONSOLE.PDB
-  All outputs are up-to-date.
+  Inputs for C:\OXAUTOMATION\SRC\TSCONSOLE\RELEASE\STDAFX.OBJ|C:\OXAUTOMATION\SRC\TSCONSOLE\RELEASE\TSCONSOLE.OBJ|C:\OXAUTOMATION\SRC\TSCONSOLE\RELEASE\TSCONSOLE.RES:
+  	C:\PROGRAM FILES (X86)\WINDOWS KITS\8.0\LIB\WIN8\UM\X86\KERNEL32.LIB
+  	C:\PROGRAM FILES (X86)\WINDOWS KITS\8.0\LIB\WIN8\UM\X86\USER32.LIB
+  	C:\PROGRAM FILES (X86)\WINDOWS KITS\8.0\LIB\WIN8\UM\X86\GDI32.LIB
+  	C:\PROGRAM FILES (X86)\WINDOWS KITS\8.0\LIB\WIN8\UM\X86\WINSPOOL.LIB
+  	C:\PROGRAM FILES (X86)\WINDOWS KITS\8.0\LIB\WIN8\UM\X86\COMDLG32.LIB
+  	C:\PROGRAM FILES (X86)\WINDOWS KITS\8.0\LIB\WIN8\UM\X86\ADVAPI32.LIB
+  	C:\PROGRAM FILES (X86)\WINDOWS KITS\8.0\LIB\WIN8\UM\X86\SHELL32.LIB
+  	C:\PROGRAM FILES (X86)\WINDOWS KITS\8.0\LIB\WIN8\UM\X86\OLE32.LIB
+  	C:\PROGRAM FILES (X86)\WINDOWS KITS\8.0\LIB\WIN8\UM\X86\OLEAUT32.LIB
+  	C:\PROGRAM FILES (X86)\WINDOWS KITS\8.0\LIB\WIN8\UM\X86\UUID.LIB
+  	C:\PROGRAM FILES (X86)\WINDOWS KITS\8.0\LIB\WIN8\UM\X86\ODBC32.LIB
+  	C:\PROGRAM FILES (X86)\WINDOWS KITS\8.0\LIB\WIN8\UM\X86\ODBCCP32.LIB
+  	C:\OXAUTOMATION\SRC\TSCONSOLE\RELEASE\TSCONSOLE.RES
+  	C:\OXAUTOMATION\SRC\TSCONSOLE\RELEASE\STDAFX.OBJ
+  	C:\OXAUTOMATION\SRC\TSCONSOLE\RELEASE\TSCONSOLE.OBJ
+  	C:\WINDOWS\GLOBALIZATION\SORTING\SORTDEFAULT.NLS
+  	C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 11.0\VC\BIN\C2.DLL
+  	C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 11.0\VC\LIB\MSVCRT.LIB
+  	C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 11.0\VC\LIB\OLDNAMES.LIB
+  	C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 11.0\VC\LIB\MSVCPRT.LIB
+  	C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 11.0\VC\BIN\1033\LINKUI.DLL
+  	C:\PROGRAM FILES (X86)\WINDOWS KITS\8.0\BIN\X86\RC.EXE
+  	C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 11.0\VC\BIN\CVTRES.EXE
+  	C:\WINDOWS\SYSTEM32\TZRES.DLL
+  	C:\WINDOWS\SYSTEM32\RSAENH.DLL
+  Source compilation required: input C:\OXAUTOMATION\SRC\TSCONSOLE\RELEASE\TSCONSOLE.OBJ is newer than output C:\OXAUTOMATION\BIN\TSCONSOLE.EXE.
+  C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\oxautomation\bin\TSConsole.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\oxautomation\bin\TSConsole.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\oxautomation\bin\TSConsole.lib" /MACHINE:X86 /SAFESEH Release\TSConsole.res
+  Release\stdafx.obj
+  Release\TSConsole.obj
+  Tracking command:
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v8.0A\bin\NETFX 4.0 Tools\Tracker.exe /a /d C:\Windows\Microsoft.NET\Framework\v4.0.30319\FileTracker.dll /i C:\oxautomation\src\TSConsole\Release /r "C:\OXAUTOMATION\SRC\TSCONSOLE\RELEASE\STDAFX.OBJ|C:\OXAUTOMATION\SRC\TSCONSOLE\RELEASE\TSCONSOLE.OBJ|C:\OXAUTOMATION\SRC\TSCONSOLE\RELEASE\TSCONSOLE.RES" /b MSBuildConsole_CancelEvent321342ce36274b2daaeb242831fd10a0  /c "C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe"  /ERRORREPORT:QUEUE /OUT:"C:\oxautomation\bin\TSConsole.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\oxautomation\bin\TSConsole.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\oxautomation\bin\TSConsole.lib" /MACHINE:X86 /SAFESEH Release\TSConsole.res
+  Release\stdafx.obj
+  Release\TSConsole.obj
+  Generating code
+  Finished generating code
 Done executing task "Link".
 Task "Message"
   TSConsole.vcxproj -> C:\oxautomation\bin\TSConsole.exe
@@ -1008,7 +1040,9 @@ Done building target "Link" in project "TSConsole.vcxproj".
 Target "MetaGenInputsOutputs" skipped, due to false condition; ('$(EnableManagedIncrementalBuild)' == 'True') was evaluated as ('false' == 'True').
 Target "ComputeMetaGenInputs" skipped, due to false condition; ('$(CLRSupport)'!='' and '$(CLRSupport)'!='false') was evaluated as ('false'!='' and 'false'!='false').
 Target "MetaGen" skipped, due to false condition; ('@(MetaGen)' != '') was evaluated as ('' != '').
-Target "ComputeLinkImportLibraryOutputsForClean" skipped, due to false condition; ('$(LinkSkippedExecution)' != 'true') was evaluated as ('True' != 'true').
+Target "ComputeLinkImportLibraryOutputsForClean" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V110\Microsoft.CppBuild.targets" from project "C:\oxautomation\src\TSConsole\TSConsole.vcxproj" (target "_Link" depends on it):
+Task "WriteLinesToFile" skipped, due to false condition; ('@(_LinkImportLibrary)' != '') was evaluated as ('' != '').
+Done building target "ComputeLinkImportLibraryOutputsForClean" in project "TSConsole.vcxproj".
 Target "AfterLink" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V110\Microsoft.CppBuild.targets" from project "C:\oxautomation\src\TSConsole\TSConsole.vcxproj" (target "_Link" depends on it):
 Done building target "AfterLink" in project "TSConsole.vcxproj".
 Target "_Link" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V110\Microsoft.CppBuild.targets" from project "C:\oxautomation\src\TSConsole\TSConsole.vcxproj" (target "_BuildLinkAction" depends on it):
@@ -1019,7 +1053,13 @@ Target "ComputeLegacyManifestEmbedding" skipped. Previously built successfully.
 Target "_Manifest" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V110\Microsoft.CppBuild.targets" from project "C:\oxautomation\src\TSConsole\TSConsole.vcxproj" (target "_BuildLinkAction" depends on it):
 Task "CallTarget" skipped, due to false condition; ('$(LegacyManifestEmbedding)' == 'true') was evaluated as ('' == 'true').
 Done building target "_Manifest" in project "TSConsole.vcxproj".
-Target "RegisterOutput" skipped, due to false condition; ('$(EmbedManifest)'=='true' and '$(LinkSkippedExecution)' != 'true' and ('$(_IsNativeEnvironment)' == 'true' or '$(Platform)' == 'Win32')) was evaluated as ('true'=='true' and 'True' != 'true' and ('' == 'true' or 'Win32' == 'Win32')).
+Target "RegisterOutput" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V110\Microsoft.CppCommon.targets" from project "C:\oxautomation\src\TSConsole\TSConsole.vcxproj" (target "_BuildLinkAction" depends on it):
+Task "Exec" skipped, due to false condition; ('$(ConfigurationType)'=='DynamicLibrary' and '%(Link.RegisterOutput)'=='true' and '%(Link.PerUserRedirection)'!='true') was evaluated as ('Application'=='DynamicLibrary' and 'false'=='true' and 'false'!='true').
+Task "Exec" skipped, due to false condition; ('$(ConfigurationType)'=='DynamicLibrary' and '%(Link.RegisterOutput)'=='true' and '%(Link.PerUserRedirection)'=='true') was evaluated as ('Application'=='DynamicLibrary' and 'false'=='true' and 'false'=='true').
+Task "Exec" skipped, due to false condition; ('$(ConfigurationType)'=='Application' and '%(Link.RegisterOutput)'=='true' and '%(Link.PerUserRedirection)'!='true') was evaluated as ('Application'=='Application' and 'false'=='true' and 'false'!='true').
+Task "Exec" skipped, due to false condition; ('$(ConfigurationType)'=='Application' and '%(Link.RegisterOutput)'=='true' and '%(Link.PerUserRedirection)'=='true') was evaluated as ('Application'=='Application' and 'false'=='true' and 'false'=='true').
+Task "VCMessage" skipped, due to false condition; ('$(_RegisterOutputExitCode)' != '' and '$(_RegisterOutputExitCode)' != '0') was evaluated as ('' != '' and '' != '0').
+Done building target "RegisterOutput" in project "TSConsole.vcxproj".
 Target "PrepareForBuild" skipped. Previously built successfully.
 Target "ResolveReferences" skipped. Previously built successfully.
 Target "ResolvedXDCMake" in file "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V110\Microsoft.CppBuild.targets" from project "C:\oxautomation\src\TSConsole\TSConsole.vcxproj" (target "_XdcMake" depends on it):
@@ -1641,4 +1681,4 @@ Build succeeded.
     1 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:01.02
+Time Elapsed 00:00:02.59

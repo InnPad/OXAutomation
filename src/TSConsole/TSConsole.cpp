@@ -257,9 +257,9 @@ VOID LogMessage(LONG time, UINT message, WPARAM wParam, LPARAM lParam)
 	msg = WinMsgs.find(message);
 
 	if (msg == WinMsgs.end()) {
-		printf("%02u:%02u:%02u %20u %08X %08X\n", newtime.tm_hour, newtime.tm_min, newtime.tm_sec, message, wParam, lParam);
+		printf("%02u:%02u:%02u %32u %08X %08X\n", newtime.tm_hour, newtime.tm_min, newtime.tm_sec, message, wParam, lParam);
 	} else {
 		char* value = msg->second;
-		printf("%02u:%02u:%02u %20s %08X %08X\n", newtime.tm_hour, newtime.tm_min, newtime.tm_sec, value, wParam, lParam);
+		printf("%02u:%02u:%02u %32s %08X %08X\n", newtime.tm_hour, newtime.tm_min, newtime.tm_sec, value, wParam, lParam);
 	}
 }
