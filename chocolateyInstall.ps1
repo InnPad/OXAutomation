@@ -22,14 +22,7 @@ try { #error handling is only necessary if you need to do anything in addition t
     }
     
     Write-Output "Starting $packageName installation on $installPath.."
-    
-    # Delete existing files
-    if (Test-Path $installPath) {
-        Write-Output "Cleaning site content at $installPath."
-        # Clean
-        Remove-Item "$installPath\*" -Force -Recurse | Out-Null
-    }
-    
+        
     # Copy binaries
     Write-Output "Copying binaries to $installPath..."
     Copy-Item $packagePath\bin\* $installPath | Out-Null

@@ -9,7 +9,7 @@ namespace OXAutomation
 
             service.InitializeService();
 
-            service.Start();
+            service.StartImplementation();
 
             while (true)
             {

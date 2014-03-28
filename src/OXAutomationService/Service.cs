@@ -13,12 +13,12 @@ namespace OXAutomation
 
         protected override void OnStart(string[] args)
         {
-            Start();
+            StartImplementation();
         }
 
         protected override void OnStop()
         {
-            Stop();
+            StopImplementation();
         }
     }
 }

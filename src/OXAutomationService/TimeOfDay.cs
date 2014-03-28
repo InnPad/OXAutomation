@@ -16,25 +16,27 @@ namespace OXAutomation
             _value = value;
         }
 
-        public bool IsNow
-        {
-            get
-            {
-                DateTime next = DateTime.Today + _value, now = DateTime.Now;
-
-                return (next - now).TotalMilliseconds < 1000;
-            }
-        }
-
         public DateTime Next(TimeSpan period)
         {
-            DateTime next = DateTime.Today + _value;
+            DateTime next = DateTime.Today + _value, now = DateTime.Now;
+            var timeout = (next - now).TotalMilliseconds;
+            double offset = 0.0;
 
-            if (next < DateTime.Now)
+            if (TimeSpan.Zero.Equals(period))
             {
-                next = period.TotalSeconds >= 1 ? next + period : next.AddDays(1);
+                next = next.AddDays(1);
+            }
+            else if (next < now)
+            {
+                offset = Math.Round((now - next).TotalSeconds / period.TotalSeconds);
+            }
+            else
+            {
+                offset = Math.Round((now - next).TotalSeconds / period.TotalSeconds);
             }
 
+            next = next.AddSeconds(offset * period.TotalSeconds);
+            
             return next;
         }
 

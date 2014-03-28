@@ -4,9 +4,8 @@ properties {
     $baseDirectory = Get-Item $psake.build_script_dir
     $srcDirectory = "$baseDirectory\src"
     $solution = "$srcDirectory\$solutionName.sln"
-    $buildDirectory = "$baseDirectory\.build"
+    $buildDirectory = "$baseDirectory\bin"
     $toolsDirectory = "$baseDirectory\tools"
-    $packageDirectory = "$baseDirectory\package"
     $buildLog = "$buildDirectory\build.log"
     $configuration = "Release"
     $visualStudioVersion = "11.0" # Visual Studio 2010
@@ -17,17 +16,12 @@ task default -depends Package
 
 # Delete existing build directory and clean solution
 task Clean {
-    # Delete existing build directory
-    Delete-Directory -Path $buildDirectory
-    
     # Clean solution
     Clean-Solution -Solution $solution -VisualStudioVersion $visualStudioVersion
 }
 
 # Compile solution
 task Compile -depends Clean {
-    # Delete existing build directory
-    Delete-Directory -Path $buildDirectory
     
     # Create build directory
     New-Item $buildDirectory -ItemType Directory -Force | Out-Null
@@ -67,17 +61,6 @@ function Compile-Solution() {
     Invoke-Expression "msbuild $solution /fl /flp:logfile=$buildLog /p:Configuration=$configuration /p:OutDir=$outputDirectory /p:VisualStudioVersion=$visualStudioVersion /t:Build /v:Quiet"
 }
 
-# Delete existing directory
-function Delete-Directory() {
-    # Pass in the Parameters.
-    param ([string] $path)
-    
-    # Delete existing directory
-    if (Test-Path $path) {
-        Remove-Item $path -Force -Recurse
-    }
-}
-
 # Pack binaries
 function Pack-Binaries() {
     # Pass in the Parameters.
@@ -96,11 +79,9 @@ function Pack-Binaries() {
         Invoke-Expression "$toolsDirectory\Chocolatey\chocolateyinstall\chocolatey.ps1 pack $packageName.nuspec"
     popd
     
-    Copy-Item $buildDirectory\$solutionName.*.nupkg $packageDirectory | Out-Null
+    Remove-Item $buildDirectory\tools -Recurse | Out-Null 
     
-    Remove-Item $buildDirectory -Force -Recurse | Out-Null
-    
-    dir $packageDirectory
+    dir $buildDirectory
 }
 
 function FTP-Upload-File() {
