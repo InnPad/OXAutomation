@@ -1,4 +1,4 @@
-Build started 3/28/2014 2:41:53 PM.
+Build started 3/28/2014 2:58:40 PM.
 Project "C:\oxautomation\src\OXAutomation.sln" on node 1 (Build target(s)).
 Building with tools version "2.0".
 Target "ValidateSolutionConfiguration" in file "C:\oxautomation\src\OXAutomation.sln.metaproj" from project "C:\oxautomation\src\OXAutomation.sln" (entry point):
@@ -459,9 +459,18 @@ Done executing task "CallTarget".
 Done building target "PreXsdCodeGen" in project "OXAutomationService.csproj".
 Target "XsdCodeGen" skipped, due to false condition; ( '$(XsdCodeGenPreCondition)' == 'True' ) was evaluated as ( 'False' == 'True' ).
 Target "CoreCompile" in file "C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Microsoft.CSharp.targets" from project "C:\oxautomation\src\OXAutomationService\OXAutomationService.csproj" (target "Compile" depends on it):
-Skipping target "CoreCompile" because all output files are up-to-date with respect to the input files.
-Input files: ApplicationLoader.cs;Configuration\SendElement.cs;Configuration\SendElementCollection.cs;Configuration\TaskSection.cs;Messages.cs;Process.cs;Process.Start.cs;ProcessExtensions.cs;ServiceImplementation.cs;StringExtensions.cs;TSConsole.cs;TimeOfDay.cs;Service.cs;Service.Designer.cs;Program.cs;Properties\AssemblyInfo.cs;User32.cs;C:\Users\LMARTINEZ\AppData\Local\Temp\.NETFramework,Version=v4.5.AssemblyAttributes.cs;C:\oxautomation\src\packages\log4net.2.0.3\lib\net40-full\log4net.dll;C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Microsoft.CSharp.dll;C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\mscorlib.dll;C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Configuration.dll;C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Core.dll;C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.DataSetExtensions.dll;C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.dll;C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll;C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.ServiceProcess.dll;C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.dll;C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.Linq.dll;C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Microsoft.CSharp.targets;C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Microsoft.NETFramework.props;C:\oxautomation\src\OXAutomationService\OXAutomationService.csproj;C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Microsoft.Common.targets;C:\oxautomation\src\OXAutomationService\OXAutomationService.csproj.user;C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Microsoft.NETFramework.targets;C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Microsoft.Xaml.targets
-Output files: obj\Release\OXAutomationService.exe;obj\Release\OXAutomationService.pdb
+Building target "CoreCompile" completely.
+Input file "Process.Start.cs" is newer than output file "obj\Release\OXAutomationService.pdb".
+Using "Csc" task from assembly "Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+Task "Csc"
+  C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Csc.exe /noconfig /nowarn:1701,1702 /nostdlib+ /platform:anycpu32bitpreferred /errorreport:prompt /warn:4 /define:TRACE /highentropyva+ /reference:C:\oxautomation\src\packages\log4net.2.0.3\lib\net40-full\log4net.dll /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Microsoft.CSharp.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\mscorlib.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Configuration.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Core.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.DataSetExtensions.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.ServiceProcess.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.Linq.dll" /debug:pdbonly /filealign:512 /optimize+ /out:obj\Release\OXAutomationService.exe /subsystemversion:6.00 /target:winexe /utf8output ApplicationLoader.cs Configuration\SendElement.cs Configuration\SendElementCollection.cs Configuration\TaskSection.cs Messages.cs Process.cs Process.Start.cs ProcessExtensions.cs ServiceImplementation.cs StringExtensions.cs TSConsole.cs TimeOfDay.cs Service.cs Service.Designer.cs Program.cs Properties\AssemblyInfo.cs User32.cs "C:\Users\LMARTINEZ\AppData\Local\Temp\.NETFramework,Version=v4.5.AssemblyAttributes.cs"
+  Microsoft (R) Visual C# Compiler version 4.0.30319.18408
+  
+  for Microsoft (R) .NET Framework 4.5
+  Copyright (C) Microsoft Corporation. All rights reserved.
+  
+Done executing task "Csc".
+Task "CallTarget" skipped, due to false condition; ('$(TargetsTriggeredByCompilation)' != '') was evaluated as ('' != '').
 Done building target "CoreCompile" in project "OXAutomationService.csproj".
 Target "_TimeStampAfterCompile" skipped, due to false condition; ('$(RunPostBuildEvent)'=='OnOutputUpdated' or ('$(RegisterForComInterop)'=='true' and '$(OutputType)'=='library')) was evaluated as (''=='OnOutputUpdated' or (''=='true' and 'WinExe'=='library')).
 Target "AfterCompile" in file "C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Microsoft.Common.targets" from project "C:\oxautomation\src\OXAutomationService\OXAutomationService.csproj" (target "Compile" depends on it):
@@ -1632,4 +1641,4 @@ Build succeeded.
     1 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:00.66
+Time Elapsed 00:00:01.02

@@ -27,11 +27,9 @@ namespace OXAutomation
             {
                 var process = System.Diagnostics.Process.GetProcessById((int)procInfo.dwProcessId);
 
-                logger.InfoFormat("Process created with user interface. Spinning thread a few iterations so UI gets ready...", process.ProcessName, process.Id);
+                logger.InfoFormat("Process {0} ({1})created with user interface. Spinning thread a few times so UI gets ready...", process.ProcessName, process.Id);
 
-                System.Threading.Thread.SpinWait(10);
-
-                process.WaitForInputIdle(5000);
+                System.Threading.Thread.SpinWait(1000);
 
                 return new Process(process);
             }

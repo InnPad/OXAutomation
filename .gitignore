@@ -81,3 +81,6 @@ src/TSConsole/Release/vc110.pdb
 src/OXAutomationService/bin/Debug/log4net.dll
 src/OXAutomationService/bin/Debug/log4net.xml
 src/OXAutomation.opensdf
+src/OXAutomationConsole/bin/Debug/log4net.dll
+src/OXAutomationConsole/bin/Debug/log4net.xml
+src/OXAutomationConsole/bin/Debug/OXAutomationConsole.exe
